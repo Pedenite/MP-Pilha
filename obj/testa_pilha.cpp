@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include <pilha.hpp>
+#include "../include/pilha.hpp"
 
 int main(){
     Pilha p;
     push(&p);
 
+    return 0;
 }

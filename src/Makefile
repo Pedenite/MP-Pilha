@@ -1,17 +1,14 @@
-IDIR =../include
+IDIR=../include
 CC=g++
 CFLAGS=-I$(IDIR)
 
 ODIR=../obj
-#LDIR =../lib
 
-#LIBS
-
-_DEPS = pilha.hpp
+_DEPS = pilha.hpp 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_PILHA = testa_pilha.o pilha.o 
-OBJ = $(patsubst %,$(ODIR)/%,$(_PILHA))
+TESTA_PILHA = testa_pilha.o pilha.o 
+OBJ = $(patsubst %,$(ODIR)/%,$(TESTA_PILHA))
 
 $(ODIR)/%.o: %.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
