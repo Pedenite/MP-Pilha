@@ -79,7 +79,14 @@ int main(){
 
     while(exit == FALSE){
         int o = menu();
+        printf("\n");
         opt(o, &p, &exit);
+        if(o == -1)
+            break;
+
+        printf("Press <enter> to continue...\n");
+        while(getchar()!='\n');
+            getchar();
     }
 
     return 0;
